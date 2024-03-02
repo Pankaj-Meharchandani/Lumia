@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Lumia</string>
+    <string name="hello_">
+        Hello!
+    </string>
+    <string name="proceed">
+PROCEED
+</string>
+    <string name="personalize">Personalize</string>
+    <string name="make_yourse">Make yourself comfortable</string>
+    <string name="background">Background</string>
+    <string name="corner_radius">Corner Radius</string>
+</resources>

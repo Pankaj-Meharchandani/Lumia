@@ -1,0 +1,38 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Base application theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- Add other styles as needed -->
+    </style>
+
+    <!-- styles.xml -->
+    <style name="hello_">
+        <item name="android:textSize">60sp</item>
+        <item name="android:letterSpacing">-0.05</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="proceed">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.5</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="personalize">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="make_yourse">
+    <item name="android:textSize">16sp</item>
+        <item name="android:textColor">?attr/SecText</item>
+    </style>
+</resources>

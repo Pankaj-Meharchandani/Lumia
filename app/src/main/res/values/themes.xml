@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Lumia" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColor">#434343</item>
+        <item name="myStrokeColor">#434343</item>
+        <item name="android:background">#f0f0f0</item>
+        <item name="SecText">#9F9F9F</item>
+    </style>
+
+    <style name="Theme.Lumia" parent="Base.Theme.Lumia" />
+
+</resources>
