@@ -21,34 +21,32 @@ public class MainActivity extends AppCompatActivity {
         ImageView logoImageView = findViewById(R.id.logoImageView);
         TextView infoTextView = findViewById(R.id.hello_);
 
-        // Fade out the logo
+        // Fade out the logo while moving it to the top
         ObjectAnimator fadeOutLogo = ObjectAnimator.ofFloat(logoImageView, "alpha", 1.0f, 0.0f);
+        ObjectAnimator moveUpLogo = ObjectAnimator.ofFloat(logoImageView, "translationY", 0f, -logoImageView.getHeight());
         fadeOutLogo.setDuration(1000);
+        moveUpLogo.setDuration(1000);
 
         // Delay the appearance of the text view by 2000ms
-        infoTextView.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                // Fade in the text view
-                ObjectAnimator fadeInText = ObjectAnimator.ofFloat(infoTextView, "alpha", 0.0f, 1.0f);
-                fadeInText.setDuration(1000);
+        infoTextView.postDelayed(() -> {
+            // Fade in the text view while moving it from the bottom to center
+            ObjectAnimator fadeInText = ObjectAnimator.ofFloat(infoTextView, "alpha", 0.0f, 1.0f);
+            ObjectAnimator moveUpText = ObjectAnimator.ofFloat(infoTextView, "translationY", infoTextView.getHeight(), 0f);
+            fadeInText.setDuration(1000);
+            moveUpText.setDuration(1000);
 
-                // Create an AnimatorSet to play both animations together
-                AnimatorSet animatorSet = new AnimatorSet();
-                animatorSet.playTogether(fadeOutLogo, fadeInText);
-                animatorSet.start();
+            // Create an AnimatorSet to play both animations together
+            AnimatorSet animatorSet = new AnimatorSet();
+            animatorSet.playTogether(fadeOutLogo, moveUpLogo, fadeInText, moveUpText);
+            animatorSet.start();
 
-                // Delay opening the new activity by 2000ms
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        // Open the new activity named Personalize
-                        Intent intent = new Intent(MainActivity.this, Home.class);
-                        startActivity(intent);
-                        finish();  // Optional, if you want to finish the current activity
-                    }
-                }, 2000);
-            }
+            // Delay opening the new activity by 2000ms
+            new Handler().postDelayed(() -> {
+                // Open the new activity named Home
+                Intent intent = new Intent(MainActivity.this, Home.class);
+                startActivity(intent);
+                finish();  // Optional, if you want to finish the current activity
+            }, 2000);
         }, 1500);
     }
 }

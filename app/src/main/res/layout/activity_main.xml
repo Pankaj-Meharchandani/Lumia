@@ -10,17 +10,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:alpha="1.0"
         android:src="@drawable/logo"
-        android:alpha="1.0" />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/hello_"
         android:layout_width="137dp"
         android:layout_height="83dp"
         android:layout_centerInParent="true"
+        android:alpha="0.0"
         android:gravity="top"
         android:text="@string/hello_"
-        android:textAppearance="@style/hello_"
-        android:alpha="0.0" />
+        android:textAppearance="@style/hello_" />
 
 </RelativeLayout>
